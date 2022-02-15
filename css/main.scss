@@ -1,0 +1,47 @@
+body {
+    background-color: blueviolet;
+    margin: 0;
+    height: 100vh;
+    // cursor: none;
+    // cursor: url('../images/kreis.svg'), auto;   
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+    // animation: cursorAnim 2s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
+    }    
+}
+
+@keyframes cursorClickAnim {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }    
+}
+
+.onClick{
+    animation: cursorClickAnim 1000ms forwards;
+    border: 1px solid red;
+}
+
+// CSS svg animation
+// https://www.youtube.com/watch?v=FJ44qmE5odc

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+        <div class="cursor"></div>
+
+        <script>
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+            })
+
+            document.addEventListener('click', () => {
+                cursor.classList.add("onClick");
+                setTimeout(() => {
+                    cursor.classList.remove("onClick");
+                }, 1000)
+            })
+        </script>
+</body>
+</html>
